@@ -1,0 +1,95 @@
+    if message.content.startswith('+credits') and discord.utils.get(
+            message.author.roles, name="Credditor"):
+        person = (message.author.id)
+        await message.delete()
+        await message.channel.send('Cwedits added')
+        print('code 3')
+        credit = message.content
+        scredit = list(credit.split())
+        scredit.remove(scredit[0])
+        amnt = scredit.pop(0)
+        user = (scredit)
+        print(amnt)
+        print(credit)
+        print(user)
+        amnts = int(amnt)
+        username = str(user)
+        print(username)
+        file1 = open("@!" + (username) + ".txt", "a")
+        file1.close
+        file1 = open("@!" + (username) + ".txt", "r")
+        cr = file1.read()
+        cr = int(float(cr))
+        total = amnts + cr
+        file1.close
+        file1 = open("@!" + (username) + ".txt", "w")
+        total = str(total)
+        file1.write(total)
+        return person, credit
+#when command -credit is used
+    if message.content.startswith('-credits') and discord.utils.get(
+            message.author.roles, name="Credditor"):
+        person = (message.author.id)
+        await message.delete()
+        await message.channel.send('Cwedits wost')
+        print('code 6')
+        credit = message.content
+        scredit = list(credit.split())
+        scredit.remove(scredit[0])
+        amnt = scredit.pop(0)
+        user = (scredit)
+        print(amnt)
+        print(credit)
+        print(user)
+        amnts = int(amnt)
+        username = str(user)
+        print(username)
+        file1 = open("@!" + (username) + ".txt", "a")
+        file1.close
+        file1 = open("@!" + (username) + ".txt", "r")
+        cr = file1.read()
+        cr = int(float(cr))
+        total = (cr - amnts)
+        #      if total<0:
+        #        total=0
+        file1.close
+        file1 = open("@!" + (username) + ".txt", "w")
+        total = str(total)
+        file1.write(total)
+        return person, credit
+#check credits command
+    if message.content.startswith('$checkcredits'):
+        person = (message.author.id)
+        usr = (message.author)
+        usrnme = str(usr)
+        await message.delete()
+        prsntxt = str(person)
+        file1 = open("@!['<@!" + (prsntxt) + ">']" + ".txt", "r")
+        credits = file1.read()
+        print(credits)
+        await message.channel.send((usrnme) + (" has ") + (credits) +
+                                   " Sociaw cwedits")
+        print("code1")
+    if message.content.startswith('$checkusr'):
+        credit = message.content
+        scredit = list(credit.split())
+        scredit.remove(scredit[0])
+        person = scredit.pop(0)
+        usr = (message.author)
+        usrnme = str(usr)
+        await message.delete()
+        prsntxt = str(person)
+        file1 = open("@!['" + (prsntxt) + "']" + ".txt", "r")
+        credits = file1.read()
+        print(credits)
+        await message.channel.send((person) + (" has ") + (credits) +
+                                   " Sociaw cwedits")
+        print("code12")
+
+
+
+
+            def inner_check(message):
+        return message.author == author and message.content == "Hello"
+        msg = await client.wait_for('message', check=check(context.author), timeout=30)
+    return inner_check
