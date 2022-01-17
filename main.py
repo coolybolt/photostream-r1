@@ -8,10 +8,9 @@ import asyncio
 import datetime as dt
 from discord.ext import commands, tasks
 intents = discord.Intents(members =True,messages=True, guilds=True)
-from dotenv import load_dotenv
-load_dotenv()
-TOKEN = os.getenv('DTOKEN')
-GUILD = os.getenv('GTOKEN')
+
+TOKEN = ('OTA1MTc4NTIzOTIzMjU5NDUz.YYGTMQ.Y8hVzHuaSxFVfw0YSWfnTD7IkD0')
+GUILD = ('771776651503075398')
 client = discord.Client()
 bot = commands.Bot(command_prefix='$')#Sets prefix for commands(!Command)
 @bot.event
